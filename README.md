@@ -92,4 +92,4 @@ Duration
 
 ## Copyright
 
-Copyright (c) 2012 Matt Wilson. See LICENSE for details.
+Copyright (c) 2012 Matt Wilson. See LICENSE for details, but it's MIT.
