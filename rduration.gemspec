@@ -6,12 +6,12 @@ Gem::Specification.new do |s|
   s.email         = ["mhw@hypomodern.com"]
   s.description   = %q{Simple utility for parsing durations from strings and comparing them. Basic math is also supported.}
   s.summary       = %q{Parse durations from strings and manipulate them.}
-  s.homepage      = "https://github.com/hypomodern/ruby-duration"
+  s.homepage      = "https://github.com/hypomodern/rduration"
 
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.name          = "ruby-duration"
+  s.name          = "rduration"
   s.require_paths = ["lib"]
   s.version       = Duration::VERSION
 

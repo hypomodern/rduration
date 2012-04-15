@@ -6,7 +6,7 @@ Provides simple (somewhat naive) Duration parsing from strings. Allows you to co
 
 Add this line to your application's Gemfile:
 
-    gem 'ruby-duration', :require => 'duration'
+    gem 'rduration', :require => 'duration'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ruby-duration
+    $ gem install rduration
 
 ## Usage
 
