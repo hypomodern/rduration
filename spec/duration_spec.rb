@@ -117,20 +117,15 @@ describe Duration do
     end
   end
 
-  describe "#hashify" do
-    it "maps a string to an easily-countable hash form" do
-      Duration.new("42m 3s").hashify("42m 3s").should == {
-        "m" => 42,
-        "s" => 3
-      }
-    end
+  describe "#count" do
     normalized_inputs = {
-      '1h 32m 07s'      => { 'h' => 1, 'm' => 32, 's' => 7 },
-      '03d 08h 11m 00s' => { 'd' => 3, 'h' => 8, 'm' => 11, 's' => 0 },
+      '1h 32m 07s'      => 5527,
+      '03d 08h 11m 00s' => 288660,
+      '42m 3s'          => 2523
     }
     normalized_inputs.each do |(input, expectation)|
-      it "converts #{input.inspect} to #{expectation.inspect}" do
-        Duration.new(input).hashify(input).should == expectation
+      it "counts the number of seconds in #{input.inspect} as #{expectation.inspect}" do
+        Duration.new(input).count.should == expectation
       end
     end
   end

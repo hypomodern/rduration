@@ -41,17 +41,10 @@ class Duration
     split.zip(UNITS).reverse.map { |unit| unit.join("") }.join(" ")
   end
 
-  def hashify string
-    string.split(" ").inject({}) do |accum, token|
-      _, amount, type = token.split(/([[:digit:]]+)(?=[[:alpha:]])/)
-      accum[type] = amount.to_i
-      accum
-    end
-  end
-
   def count input = normalize_input
-    hashify(input).inject(0) do |accum, (unit, how_many)|
-      accum += how_many * STANDARD_CONVERSION[unit]
+    input.split(" ").inject(0) do |accum, token|
+      _, amount, type = token.split(/([[:digit:]]+)(?=[[:alpha:]])/)
+      accum += STANDARD_CONVERSION[type] * amount.to_i
       accum
     end
   end
