@@ -79,8 +79,14 @@ Duration
 
 ## CHANGELOG
 
+* **v0.0.2 Speling And Hashify**
+  * Corrected spelling (thanks @czarneckiD) and killed an extraneous method.
 * **v0.0.1 Hello World**
   * Handles all of my use cases. Could be better at everything, though :).
+
+## Contributors (Thanks!)
+
+* [czarneckiD](https://github.com/czarneckiD) fixed an odd spelling mishap.
 
 ## Contributing
 
