@@ -1,11 +1,11 @@
 require "duration/version"
-require "duration/arithmatic"
+require "duration/arithmetic"
 
 class Duration
   attr_accessor :raw
 
   include Comparable
-  include Arithmatic
+  include Arithmetic
 
   def initialize input
     self.raw = input.to_s
