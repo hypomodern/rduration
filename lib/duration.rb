@@ -83,6 +83,7 @@ class Duration
     'h' => 3600,
     'd' => 86_400
   }
+  STANDARD_CONVERSION.default = 0
 
   # Comparable Protocol:
   def <=> other_thing
